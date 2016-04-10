@@ -16,6 +16,12 @@ public class AsynAjaxRestTest {
 		return "/handson/jqAjax";
 	}
 
-	
+	@RequestMapping(value = "/ajaxlocalpage", method = RequestMethod.GET)
+	public String toAjaxLocalPage(Model model) {
+
+		//model.addAttribute("name","james");
+		return "/handson/jqAjaxlocal";
+	}
+
 	
 }
