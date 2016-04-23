@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -18,6 +19,7 @@ import com.james.springboot.restspringboot.model.State;
 public class StateDao implements IStateDao{
 
 	@Autowired
+	@Qualifier(value="blsJDBC")
 	private JdbcTemplate jdbcTemplate;
 	
 	public List<State> getAllStates(){
@@ -44,8 +46,7 @@ public class StateDao implements IStateDao{
 		
 		return list;
 	}
-	
-	
+		
 	public List<State> getAllStatesByTemplate(){
 		
 		String sql ="select statecode,statenum from state";
