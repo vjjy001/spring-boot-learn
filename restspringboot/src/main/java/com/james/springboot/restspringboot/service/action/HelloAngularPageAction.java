@@ -11,8 +11,7 @@ public class HelloAngularPageAction {
 	
 	@RequestMapping(value="/angular/state",method=RequestMethod.GET)
 	public String sayHello(Model model){
-		
-		
+			
 		return "/handson/angularAjax";
 	}
 	
