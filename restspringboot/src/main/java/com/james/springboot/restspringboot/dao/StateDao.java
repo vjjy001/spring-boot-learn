@@ -47,6 +47,8 @@ public class StateDao implements IStateDao{
 		return list;
 	}
              	
+	
+	
 	public List<State> getAllStatesByTemplate(){
 		
 		String sql ="select statecode,statenum from state";
