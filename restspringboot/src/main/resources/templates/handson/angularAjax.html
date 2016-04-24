@@ -24,5 +24,21 @@
 		</div>
 	</section>
 	
+	<section ng-controller="ngLocalCtrl">
+	
+	<div>
+		<button ng-click="getEmp()">getLocalData</button>	
+	</div>
+	
+	<div ng-show="ok">
+		<ul>
+			<li ng-repeat="rdata in recvData">{{rdata.firstName +" "+rdata.lastName}}</li>
+		
+		</ul>
+	</div>
+	</section>
+	
+	
+	
 </body>
 </html>
